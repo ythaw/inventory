@@ -1,0 +1,14 @@
+{
+  "name": "inventory-app",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "concurrently \"npm --prefix server run dev\" \"npm --prefix client run dev\"",
+    "install-all": "npm --prefix server i && npm --prefix client i",
+    "start": "concurrently \"npm --prefix server start\" \"npm --prefix client start\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1"
+  }
+}
+

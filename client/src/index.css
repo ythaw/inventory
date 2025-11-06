@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@font-face {
+  font-family: 'Isocpeur';
+  src: url('./src/assets/ISOCPEUR.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html, body, #root {
+  height: 100%;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+
+
+.btn-primary {
+  @apply inline-flex items-center justify-center rounded-xl bg-white hover:bg-gray-50 transition-all duration-200 text-purple-darker px-6 py-3.5 font-semibold shadow-lg hover:shadow-xl border border-purple-soft;
+}
+
+.input-card {
+  @apply w-full bg-white border border-purple-soft/50 focus-within:border-purple-medium focus-within:ring-2 focus-within:ring-purple-medium/10 outline-none shadow-md hover:shadow-lg transition-all duration-200 px-5 py-4;
+}
+
+.input {
+  @apply w-full bg-transparent outline-none text-gray-900 placeholder-gray-400 text-base font-normal;
+}
+
+.input-label {
+  @apply block text-purple-darker font-medium text-sm mb-2.5;
+}
+
+.link {
+  @apply text-gray-500 hover:text-purple-darker underline underline-offset-2 transition-colors;
+}
+
+input:focus, input:active, input:focus-visible {
+  outline: none;
+  
+}
