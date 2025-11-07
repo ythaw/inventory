@@ -9,6 +9,8 @@
   },
   "devDependencies": {
     "concurrently": "^9.0.1"
+  },
+  "dependencies": {
+    "resend": "^6.4.1"
   }
 }
-
