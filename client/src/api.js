@@ -1,4 +1,4 @@
-const base = '/api';
+const base = import.meta.env.VITE_API_URL || 'https://inventory-bzh0.onrender.com';;
 
 async function request(path, options = {}) {
   const url = `${base}${path}`;

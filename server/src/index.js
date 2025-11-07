@@ -10,11 +10,24 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-app.use(cors({ origin: true, credentials: true }));
+app.use(cors({ origin: [
+  'https://inventory-psi-ruby.vercel.app',
+  'http://localhost:5173' // for local development
+],
+credentials: true }));
 app.use(express.json());
 
 app.get('/api/health', (_req, res) => {
   res.json({ status: 'ok' });
+});
+
+// Health check endpoint
+app.get('/', (req, res) => {
+  res.json({ 
+    status: 'Server is running',
+    message: 'Inventory Master API',
+    timestamp: new Date().toISOString()
+  });
 });
 
 app.use('/api/auth', authRoutes);
