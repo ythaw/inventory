@@ -1,0 +1,28 @@
+# dependencies
+node_modules/
+client/node_modules/
+server/node_modules/
+
+# env & secrets
+.env
+*.env
+
+# sqlite db files
+*.sqlite
+*.db
+*.db-shm
+*.db-wal
+
+# builds
+dist/
+build/
+
+# logs/caches/editor junk
+*.log
+.parcel-cache/
+.turbo/
+.cache/
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
